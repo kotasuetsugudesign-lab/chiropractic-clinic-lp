@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>田中整体院 | 慢性腰痛・肩こり専門</title>
+  <title>整体院LPテンプレート | 田中整体院</title>
 
-  <meta name="description" content="慢性腰痛・肩こり専門の田中整体院。身体のバランスや姿勢の歪みを整え、根本改善を目指す整体院です。">
-<meta name="robots" content="index, follow">
+  <meta name="description" content="整体院・整骨院向けLPテンプレート。お悩み訴求、施術方針、院長紹介、料金、FAQ、予約フォームまで備えたスマホ対応のHTML/CSS実装済みランディングページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="整体院LPテンプレート | 田中整体院">
+  <meta property="og:description" content="整体院・整骨院向けLPテンプレート。信頼感のある構成と予約導線で、スマホでも見やすいHTML/CSS実装済みデザインです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kota-web-design.github.io/chiropractic-clinic-lp/">
+  <meta property="og:image" content="https://kota-web-design.github.io/chiropractic-clinic-lp/img/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231F3A5F'/%3E%3Ctext%20x='32'%20y='42'%20font-size='30'%20text-anchor='middle'%20fill='white'%20font-family='Arial,sans-serif'%3E%E6%95%B4%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,16 +34,16 @@
       <a href="#" class="logo">田中整体院</a>
 
       <!-- ナビゲーション -->
-      <nav>
+      <nav id="siteNav" aria-label="メインナビゲーション">
         <ul class="nav-menu">
       
           <li class="menu-close-wrapper">
-            <button class="menu-close" aria-label="閉じる">×</button>
+            <button class="menu-close" type="button" aria-label="メニューを閉じる">×</button>
           </li>
       
           <li><a href="#concerns" class="nav-link">お悩み</a></li>
           <li><a href="#treatment" class="nav-link">施術法</a></li>
-          <li><a href="#case" class="nav-link">改善事例</a></li>
+          <li><a href="#case" class="nav-link">お客様の声</a></li>
           <li><a href="#profile" class="nav-link">院長紹介</a></li>
           <li><a href="#price" class="nav-link">料金</a></li>
       
@@ -49,11 +58,11 @@
       </nav>
 
       <!-- ハンバーガーメニュー -->
-      <div class="hamburger" aria-label="メニュー" aria-expanded="false">
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="siteNav" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
     </div>
 
@@ -72,24 +81,24 @@
     <!-- メインコピー -->
     <h1 class="hero-title">
       その慢性的な<br class="sp-only">肩こりや腰痛、<br>
-      もう我慢しなくていい。
+      ひとりで我慢<br class="sp-only">し続けないで。
     </h1>
 
     <!-- サブコピー -->
     <p class="hero-subtitle">
       田中整体院では、<br>
-      身体のバランスや姿勢の歪みを整え、<br class="sp-only">慢性的な不調の根本改善を目指します。
+      身体のバランスや姿勢のクセを整え、<br class="sp-only">慢性的な不調の軽減を目指します。
     </p>
 
     <p class="hero-review">
-      ★★★★★ Google口コミ4.8 / 120件以上
+      ★★★★★ お客様の声・施術事例掲載（デモ）
     </p>
 
     <!-- 信頼ミニ要素 -->
     <ul class="hero-features">
       <li>完全予約制</li>
       <li>ソフト整体</li>
-      <li>延べ3万人以上の施術実績</li>
+      <li>施術実績の掲載に対応</li>
     </ul>
 
     <!-- CTAボタン -->
@@ -140,20 +149,20 @@
 
     <p class="concerns-bridge fade-in">
       1つでも当てはまるなら、その不調は<br class="sp-only">
-      <strong>身体のバランスの崩れ</strong>が<br class="sp-only">原因かもしれません。
+      <strong>身体のバランスの崩れ</strong>が<br class="sp-only">関係しているかもしれません。
     </p>
 
   </div>
 </section>
 
 <!-- ===============================
-     3. なぜ改善しないのか？
+     3. なぜ繰り返しやすいのか？
 ================================ -->
 <section id="why">
   <div class="container">
 
     <h2 class="section-title fade-in">
-      なぜ改善しないのか？
+      なぜ繰り返しやすいのか？
     </h2>
 
     <p class="section-lead fade-in">
@@ -169,7 +178,7 @@
         <ul>
           <li>痛い部分だけをマッサージする</li>
           <li>その場しのぎの対処になる</li>
-          <li>根本原因まで分析しない</li>
+          <li>不調につながる要因まで見きれない</li>
         </ul>
       </div>
 
@@ -179,7 +188,7 @@
 
         <ul>
           <li>姿勢や身体バランスを徹底分析</li>
-          <li>痛みの本当の原因にアプローチ</li>
+          <li>不調につながる要因にアプローチ</li>
           <li>再発しにくい身体づくりをサポート</li>
         </ul>
       </div>
@@ -241,7 +250,7 @@
       <div class="step-item">
         <span class="step-number">03</span>
         <h4>原因分析</h4>
-        <p>痛みの根本原因を分析し、<br>施術方針を決定します。</p>
+        <p>不調につながる要因を確認し、<br>施術方針を決定します。</p>
       </div>
 
       <div class="step-item">
@@ -264,16 +273,16 @@
    
 
 <!-- ===============================
-     5. 改善事例
+     5. お客様の声
 ================================ -->
 <section id="case">
   <div class="container">
 
-    <h2 class="section-title fade-in">改善事例</h2>
+    <h2 class="section-title fade-in">お客様の声</h2>
 
     <p class="section-lead fade-in">
       実際に田中整体院で施術を受けられた方の<br class="sp-only">
-      改善事例をご紹介します。
+      感想サンプルをご紹介します。
     </p>
 
     <div class="case-grid">
@@ -294,8 +303,8 @@
         <div class="case-block after">
           <span>After</span>
           <p>
-            数回の施術で腰の痛みが軽減し、<br class="sp-only">
-            日常生活がとても楽になりました。
+            腰まわりが軽く感じられ、<br class="sp-only">
+            日常生活でも動きやすくなりました。
           </p>
         </div>
 
@@ -319,8 +328,8 @@
         <div class="case-block after">
           <span>After</span>
           <p>
-            施術後は肩が軽くなり、<br class="sp-only">
-            頭痛もほとんど起きなくなりました。
+            肩まわりが軽く感じられ、<br class="sp-only">
+            仕事中のつらさも和らぎました。
           </p>
         </div>
 
@@ -329,6 +338,10 @@
       </div>
 
     </div>
+
+    <p class="case-note fade-in">
+      ※掲載内容はデモです。感じ方には個人差があります。
+    </p>
 
   </div>
 </section>
@@ -353,7 +366,7 @@
         <p>
           痛みのある部分だけではなく、姿勢や身体のバランスまで
           丁寧に確認します。<br>
-          不調の本当の原因を見つけたうえで施術を行います。
+          不調につながる要因を確認したうえで施術を行います。
         </p>
       </div>
 
@@ -412,7 +425,7 @@
         </p>
 
         <p>
-          痛みのある部分だけではなく、姿勢や身体バランスなどの根本原因を見つけることを<br class="pc-only">大切にしています。
+          痛みのある部分だけではなく、姿勢や身体バランスなど不調につながる要因を見つけることを<br class="pc-only">大切にしています。
         </p>
 
         <p>
@@ -542,7 +555,7 @@
       <!-- Q1 -->
       <div class="faq-item">
 
-        <button class="faq-question">
+        <button class="faq-question" type="button" aria-expanded="false">
           整体は痛くありませんか？
           <span class="faq-icon">＋</span>
         </button>
@@ -559,15 +572,15 @@
       <!-- Q2 -->
       <div class="faq-item">
 
-        <button class="faq-question">
-          何回くらい通えば良くなりますか？
+        <button class="faq-question" type="button" aria-expanded="false">
+          何回くらい通えばいいですか？
           <span class="faq-icon">＋</span>
         </button>
 
         <div class="faq-answer">
           <p>
             お身体の状態によって個人差があります。<br>
-            初回のカウンセリングと検査で状態を確認し、最適な通院ペースをご提案いたします。
+            初回のカウンセリングと検査で状態を確認し、目安となる通院ペースをご提案いたします。
           </p>
         </div>
 
@@ -576,7 +589,7 @@
       <!-- Q3 -->
       <div class="faq-item">
 
-        <button class="faq-question">
+        <button class="faq-question" type="button" aria-expanded="false">
           どんな服装で行けばいいですか？
           <span class="faq-icon">＋</span>
         </button>
@@ -593,7 +606,7 @@
       <!-- Q4 -->
       <div class="faq-item">
 
-        <button class="faq-question">
+        <button class="faq-question" type="button" aria-expanded="false">
           当日予約はできますか？
           <span class="faq-icon">＋</span>
         </button>
@@ -626,7 +639,7 @@
 
     <p class="cta-text fade-in">
       慢性的な肩こりや腰痛は、放っておくと<br class="sp-only">
-      さらに悪化することもあります。<br>
+      長引いてしまうこともあります。<br>
       まずは一度、<br class="sp-only">お身体の状態を確認してみませんか？
     </p>
 
@@ -670,17 +683,17 @@
 
       <div class="form-group">
         <label for="name">お名前（必須）</label>
-        <input id="name" type="text" required>
+        <input id="name" name="name" type="text" autocomplete="name" required>
       </div>
 
       <div class="form-group">
         <label for="email">メールアドレス（必須）</label>
-        <input id="email" type="email" required>
+        <input id="email" name="email" type="email" autocomplete="email" required>
       </div>
 
       <div class="form-group">
         <label for="message">お問い合わせ内容</label>
-        <textarea id="message" rows="5"></textarea>
+        <textarea id="message" name="message" rows="5"></textarea>
       </div>
 
       <div class="contact-button-wrapper">
@@ -734,10 +747,7 @@
     初回3,980円で予約する
   </a>
 
-  <script src="script.js"></script>
-
-
-
 </div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -15,28 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger && navMenu) {
 
+    const closeMenu = () => {
+
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+
+    };
+
     hamburger.addEventListener('click', () => {
 
-      const isActive = hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      const isActive = !navMenu.classList.contains('active');
 
-      hamburger.setAttribute('aria-expanded', isActive);
+      hamburger.classList.toggle('active', isActive);
+      navMenu.classList.toggle('active', isActive);
+      document.body.classList.toggle('nav-open', isActive);
+
+      hamburger.setAttribute('aria-expanded', String(isActive));
 
     });
-
-  }
 
   /* ×ボタン */
 
   if (closeBtn) {
 
-    closeBtn.addEventListener('click', () => {
-
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', false);
-
-    });
+    closeBtn.addEventListener('click', closeMenu);
 
   }
 
@@ -46,13 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     link.addEventListener('click', () => {
 
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', false);
+      closeMenu();
 
     });
 
   });
+
+    document.addEventListener('keydown', (e) => {
+
+      if (e.key === 'Escape') closeMenu();
+
+    });
+
+  }
 
 
   /* =========================================
@@ -112,8 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
           otherItem.classList.remove('active');
 
           const otherIcon = otherItem.querySelector('.faq-icon');
+          const otherQuestion = otherItem.querySelector('.faq-question');
 
           if (otherIcon) otherIcon.textContent = "＋";
+          if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
 
         }
 
@@ -123,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (icon) icon.textContent = isActive ? "−" : "＋";
 
-      question.setAttribute('aria-expanded', isActive);
+      question.setAttribute('aria-expanded', String(isActive));
 
     });
 
@@ -231,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.opacity = 1;
       el.style.transform = 'translateY(0)';
 
-    }, 300 * index);
+    }, 180 * index);
 
   });
 
